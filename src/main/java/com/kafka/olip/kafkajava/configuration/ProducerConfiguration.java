@@ -14,10 +14,15 @@ import org.springframework.kafka.core.ProducerFactory;
 
 @Configuration
 public class ProducerConfiguration {
+
+	
+	
 	private static final String KAFKA_BROKER = "LSAI:9092";
+			
 	
 	@Bean
 	public ProducerFactory<String, String> producerFactory(){
+		
 		return new DefaultKafkaProducerFactory<>(producerConfigurations());
 	}
 

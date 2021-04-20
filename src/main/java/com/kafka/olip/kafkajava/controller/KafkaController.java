@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class KafkaController {
+	
+
 private KafkaTemplate<String, String> template;
 public KafkaController(KafkaTemplate<String, String> template) {
 	this.template = template;
@@ -18,5 +20,6 @@ public void produce(@RequestParam String message) {
 @GetMapping("/kafka/hello")
 public void hello() {
 	System.out.println("hello kafka");
+//	System.out.println(env.getProperty(KAFKA_BROKER)+"env");
 }
 }
