@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KafkaJavaApplication {
 
 	public static void main(String[] args) {
+		System.out.println("came to end point");
 		SpringApplication.run(KafkaJavaApplication.class, args);
 	}
 
