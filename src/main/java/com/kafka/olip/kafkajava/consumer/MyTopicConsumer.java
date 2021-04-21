@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.kafka.annotation.KafkaListener;
-
+import org.springframework.stereotype.Component;
+@Component
 public class MyTopicConsumer {
 	private final List<String> messages = new ArrayList<>();
 	@KafkaListener(topics="myTopic",groupId = "kafka-metamorphosis")
